@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApiCar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9478bb87d7040e875f37a9899d2ed99007d2f4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3ea393635be9333cd12d25e78488ac137b53812")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApiCar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApiCar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
