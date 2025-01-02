@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCar.Database;
 
@@ -10,9 +11,11 @@ using WebApiCar.Database;
 namespace WebApiCar.Migrations
 {
     [DbContext(typeof(WebApiCarDbContext))]
-    partial class WebApiCarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241229215130_accesoriesPrices")]
+    partial class accesoriesPrices
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,12 +105,9 @@ namespace WebApiCar.Migrations
                     b.Property<int?>("CarAccesoriesPricesId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CarAccesoriesPricesId1")
-                        .HasColumnType("int");
-
                     b.HasKey("CarAccesoriesId");
 
-                    b.HasIndex("CarAccesoriesPricesId1");
+                    b.HasIndex("CarAccesoriesPricesId");
 
                     b.ToTable("CarAccesories");
                 });
@@ -224,7 +224,7 @@ namespace WebApiCar.Migrations
                 {
                     b.HasOne("WebApiCar.Model.CarAccesoriesPrices", "carAccesoriesPrices")
                         .WithMany()
-                        .HasForeignKey("CarAccesoriesPricesId1");
+                        .HasForeignKey("CarAccesoriesPricesId");
 
                     b.Navigation("carAccesoriesPrices");
                 });

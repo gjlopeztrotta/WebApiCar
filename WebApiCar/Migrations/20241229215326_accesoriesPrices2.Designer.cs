@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCar.Database;
 
@@ -10,9 +11,11 @@ using WebApiCar.Database;
 namespace WebApiCar.Migrations
 {
     [DbContext(typeof(WebApiCarDbContext))]
-    partial class WebApiCarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241229215326_accesoriesPrices2")]
+    partial class accesoriesPrices2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

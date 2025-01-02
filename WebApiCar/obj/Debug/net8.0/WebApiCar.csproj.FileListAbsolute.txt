@@ -167,3 +167,7 @@ C:\Users\gjlop\Documents\GitHub\WebApiCar\WebApiCar\bin\Debug\net8.0\runtimes\wi
 C:\Users\gjlop\Documents\GitHub\WebApiCar\WebApiCar\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\gjlop\Documents\GitHub\WebApiCar\WebApiCar\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\gjlop\Documents\GitHub\WebApiCar\WebApiCar\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\gjlop\Documents\GitHub\WebApiCar\WebApiCar\bin\Debug\net8.0\WebApiCar.staticwebassets.endpoints.json
+C:\Users\gjlop\Documents\GitHub\WebApiCar\WebApiCar\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\gjlop\Documents\GitHub\WebApiCar\WebApiCar\obj\Debug\net8.0\staticwebassets\msbuild.WebApiCar.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\gjlop\Documents\GitHub\WebApiCar\WebApiCar\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

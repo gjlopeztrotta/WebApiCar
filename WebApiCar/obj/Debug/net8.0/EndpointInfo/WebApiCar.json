@@ -1,0 +1,341 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WebApiCar",
+    "version": "1.0"
+  },
+  "paths": {
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/WebApiCar": {
+      "get": {
+        "tags": [
+          "WebApiCar"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/WebApiCar/{id}": {
+      "get": {
+        "tags": [
+          "WebApiCar"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Modelo/{modelo}": {
+      "get": {
+        "tags": [
+          "WebApiCar"
+        ],
+        "parameters": [
+          {
+            "name": "modelo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Car": {
+        "required": [
+          "decripcion",
+          "familia",
+          "modelo"
+        ],
+        "type": "object",
+        "properties": {
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "familia": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "carPriceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carPrice": {
+            "$ref": "#/components/schemas/CarPrice"
+          },
+          "decripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "accesories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarAccesories"
+            },
+            "nullable": true
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarOptions"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarAccesories": {
+        "required": [
+          "accesoryName"
+        ],
+        "type": "object",
+        "properties": {
+          "carAccesoriesId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accesoryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "accesoryDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "carAccesoriesPricesId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "carAccesoriesPrices": {
+            "$ref": "#/components/schemas/CarAccesoriesPrices"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarAccesoriesPrices": {
+        "type": "object",
+        "properties": {
+          "carAccesoriesPricesId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carAccesoriesId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarOptions": {
+        "required": [
+          "optionName"
+        ],
+        "type": "object",
+        "properties": {
+          "carOptionsId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "optionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "optionDescription": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarPrice": {
+        "required": [
+          "carId"
+        ],
+        "type": "object",
+        "properties": {
+          "carPriceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalprice": {
+            "type": "number",
+            "format": "double"
+          },
+          "iva": {
+            "type": "number",
+            "format": "double"
+          },
+          "igic": {
+            "type": "number",
+            "format": "double"
+          },
+          "listprice": {
+            "type": "number",
+            "format": "double"
+          },
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

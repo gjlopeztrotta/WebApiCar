@@ -8,6 +8,7 @@ namespace WebApiCar.Database
 
         public DbSet<Car> Cars => Set<Car>();
         public DbSet<CarPrice> CarsPrices => Set<CarPrice>();
+        public DbSet<CarAccesoriesPrices> CarAccesoriesPrices => Set<CarAccesoriesPrices>();
 
         public WebApiCarDbContext(DbContextOptions<WebApiCarDbContext> options) : base(options) 
         {

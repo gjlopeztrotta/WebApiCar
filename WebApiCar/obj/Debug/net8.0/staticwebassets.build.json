@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "QXnNj3FTUtFQ4jzGIt8p7FhRfc9HcaMm4wSQumDdz5U=",
+  "Hash": "2sizPbB0KW8CneJO4ObM06HDDNwrpbS2xQwfQJXNWjM=",
   "Source": "WebApiCar",
   "BasePath": "_content/WebApiCar",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
