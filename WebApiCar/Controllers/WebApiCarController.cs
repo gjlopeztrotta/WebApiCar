@@ -34,7 +34,7 @@ namespace WebApiCar.Controllers
                 .Include(g => g.carPrice)
                 .Include(g => g.Accesories)
                 .Include(g => g.Options)
-               // .Include(g=> g.Accesories.ToString<CarAccesoriesPrices> )
+               //.Include(g=> g.Accesories)
                 .FirstOrDefaultAsync(x => x.carId == id);
             //var game= await _context.VideoGames.FindAsync(id);
 
